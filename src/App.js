@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import Table from './Components/Table Data/Table';
+import testTableData from './Components/Table Data/tableTestData.json';
+import './Index.css'
+const App = () => (
+  <>
+    <main className='absolute w-full h-full hidden lg:flex justify-center'>
+      <section className='space-y-10'>
+        <div className='w-px h-px'></div>
+        <Table
+          data={testTableData}
+          tableConfig={[
+            'nameSort',
+            'citySort',
+            'emailSort',
+            'dateSort',
+            'roleSort',
+          ]}
+        />
+        <Table
+          data={testTableData}
+          tableConfig={['nameSort', 'email', 'role']}
+        />
+        <Table
+          data={testTableData}
+          tableConfig={['email', 'dateSort', 'roleSort']}
+        />
+        <Table
+          data={testTableData}
+          tableConfig={['name', 'citySort', 'date', 'roleSort']}
+        />
+        <div className='w-px h-px'></div>
+      </section>
+    </main>
+  </>
+);
 
 export default App;
