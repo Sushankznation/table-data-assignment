@@ -16,6 +16,7 @@ const App = () => (
             'roleSort',
           ]}
         />
+        //
         <Table
           data={testTableData}
           tableConfig={['nameSort', 'email', 'role']}
