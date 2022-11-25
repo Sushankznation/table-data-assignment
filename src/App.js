@@ -1,6 +1,6 @@
 import Table from './Components/Table Data/Table';
 import testTableData from './Components/Table Data/tableTestData.json';
-import './Index.css'
+import './index.css'
 const App = () => (
   <>
     <main className='absolute w-full h-full hidden lg:flex justify-center'>
